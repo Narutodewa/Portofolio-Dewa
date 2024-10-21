@@ -1,0 +1,164 @@
+/* Global Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #322f2f;
+    color: white;
+    line-height: 1.6;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Header Styles */
+header {
+    background-color: #484444;
+    padding: 10px 10px;
+    width: 70%;
+    align-items: space-between;
+}
+
+#nav-container ul {
+    list-style: none;
+    text-align: left;
+}
+
+#nav-container ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+#nav-container ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Sidebar Styles */
+.sidebar-portofolio {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 30%;
+    background-color: #484444;
+    overflow-y: auto;
+    padding: 10px;
+    margin-top: auto;
+}
+
+.sidebar-img img {
+    width: 100%;
+    border-radius: 45%;
+}
+
+.sidebar-box {
+    margin-bottom: 20px;
+    background-color: #5a5656;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.sidebar-box h2 {
+    margin-bottom: 10px;
+}
+
+.sidebar-box table {
+    width: 100%;
+    table-layout: auto;
+}
+
+.sidebar-box td {
+    padding: 5px;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+.sidebar-box td:nth-child(3) { /* Adjust the width of the third column */
+    width: 100%; /* Give the third column more space */
+    word-wrap: break-word; /* Ensure long text wraps */
+    white-space: normal; /* Allow normal line breaks */
+    overflow-wrap: anywhere; /* Break the word if it’s too long */
+}
+/* Main Content Styles */
+.main-content {
+    margin-right: 35%;
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+}
+
+h3 {
+    margin-bottom: 5px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+
+.card {
+    width: 100%;
+    height: 254px;
+    border-radius: 4px;
+    background: #322f2f;
+    display: flex;
+    gap: 5px;
+    padding: .4em;
+  }
+  
+  .card p {
+    height: 100%;
+    flex: 1;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all .5s;
+    background: #322f2f;
+    border: 1px solid #ff5a91;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card p:hover {
+    flex: 4;
+  }
+  .card p img{
+    width: 360px
+  }
+
+  .card p:hover img {
+    width: 100%;
+  }
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    header{
+        width: 100%;
+    }
+
+    .sidebar-portofolio {
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        margin-right: 0;
+        padding: 10px;
+    }
+
+    header {
+        text-align: center;
+    }
+}
