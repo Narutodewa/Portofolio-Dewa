@@ -80,15 +80,15 @@ header {
     overflow-wrap: break-word;
 }
 
-.sidebar-box td:nth-child(3) { /* Adjust the width of the third column */
-    width: 100%; /* Give the third column more space */
-    word-wrap: break-word; /* Ensure long text wraps */
-    white-space: normal; /* Allow normal line breaks */
-    overflow-wrap: anywhere; /* Break the word if it’s too long */
+.sidebar-box td:nth-child(3) { 
+    width: 100%; 
+    word-wrap: break-word; 
+    white-space: normal; 
+    overflow-wrap: anywhere; 
 }
 /* Main Content Styles */
 .main-content {
-    margin-right: 35%;
+    margin-right: 30%;
     padding: 20px;
 }
 
@@ -106,41 +106,184 @@ p {
     margin-bottom: 15px;
 }
 
-
-.card {
-    width: 100%;
-    height: 254px;
-    border-radius: 4px;
-    background: #322f2f;
+.card-container {
     display: flex;
-    gap: 5px;
-    padding: .4em;
-  }
-  
-  .card p {
-    height: 100%;
-    flex: 1;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 2px;
-    transition: all .5s;
-    background: #322f2f;
-    border: 1px solid #ff5a91;
-    display: flex;
+    gap: 10px;
     justify-content: center;
-    align-items: center;
-  }
-  
-  .card p:hover {
-    flex: 4;
-  }
-  .card p img{
-    width: 360px
-  }
+    padding: 20px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
 
-  .card p:hover img {
+.flip-card {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.toggle-flip {
+    display: none;
+}
+
+.flip-card-inner {
+    position: relative;
     width: 100%;
-  }
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.toggle-flip:checked + .flip-card .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.5s;
+}
+
+.flip-card-front {
+    background-color: #5a5656;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.flip-card-back {
+    background-color: #5a5656;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.flip-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+.content-container {
+    text-align: start;
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.content-container-maulid {
+    text-align: end;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: 0;
+    position: relative;
+    flex-direction: column;
+}
+
+/* Hiding radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Styling the buttons */
+.button-container {
+    margin: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0px;
+    background-color: #5a5656;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+.content {
+    opacity: 0;
+    position: flex;
+    display: flex;
+    transition: opacity 1s ease;
+    display: none;
+    flex-direction: row;
+}
+.content-maulid {
+    opacity: 0;
+    position: flex;
+    display: flex;
+    transition: opacity 1s ease;
+    display: none;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+#content1:checked ~ .content1,
+#content2:checked ~ .content2{
+    opacity: 1;
+    display: block;
+}
+
+#content3:checked ~ .content3,
+#content4:checked ~ .content4{
+    opacity: 1;
+    display: block;
+}
+.content img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.content-isra {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.content-maulid img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.content-item {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    margin: 0;
+}
+.content-item-maulid {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    margin: 0;
+    flex-direction: row-reverse;
+}
+
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
     header{
@@ -161,4 +304,46 @@ p {
     header {
         text-align: center;
     }
+    .flip-card {
+        width: 150px;
+        height: 250px;
+        perspective: 1000px;
+        overflow-wrap: break-word;
+        cursor: pointer;
+        display: inline-block;
+    }
+    .flip-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    .flip-card-front {
+        background-color: #5a5656;
+        color: white;
+        flex-wrap: wrap;
+        overflow-wrap: break-word;
+    }
+
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: transform 0.5s;
+    }
+
+    .flip-card-back {
+        background-color: #5a5656;
+        color: white;
+        transform: rotateY(180deg);
+        font-size: 13px;
+    }
+    
 }
