@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Kadek Bagus Sadewa Putra</title>
     <link href="style.css" rel="stylesheet">
+    <script src="js.js"></script>
 </head>
 <body>
     <!-- Header and Navigation -->
@@ -21,12 +22,14 @@
                 </ul>
             </nav>
         </div>
+        
+        
     </header>
 
     <!-- Sidebar Portfolio -->
     <div class="sidebar-portofolio">
         <div class="sidebar-img">
-            <img src="img/Burger.jpg" alt="Personal logo"> 
+            <img src="img/logo.png" alt="Personal logo"> 
         </div>
         <div class="sidebar-box">
             <h2>About Me</h2>
@@ -51,67 +54,176 @@
         </div>
     </div>
 
-    <!-- Main Content -->
+
     <div class="main-content">
         <section id="project-bl">
-        <h2>Project BL</h2>
-        <div class="card">
-            <p><img src="img/maket.jpg"></p>
-            <p><img src="img/Short movie.jpeg"></p>
-            <p><img src="img/Kunjungan.jpeg"></p>
-            <p><img src="img/Kebudiluhuran.jpeg"></p>
-            <p><img src="img/Karya Ilmiah.jpeg"></p>
+            <h2>Project BL</h2>
+            <div class="card-container">
+                <div class="card">
+                    <input type="checkbox" id="card1" class="toggle-flip">
+                    <label for="card1" class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <p class="title">Maket</p> <br>
+                                <img src="img/maket.jpg" alt="Maket">
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="title">Maket</p>
+                                <p>Maket adalah projek berkelompok yang bertujuan untuk membuat sebuah rekayasa tempat </p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+    
+                <!-- Repeat for other cards -->
+                <div class="card">
+                    <input type="checkbox" id="card2" class="toggle-flip">
+                    <label for="card2" class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <p class="title">Short Movie</p>
+                                <img src="img/Short movie.jpeg" alt="Short Movie">
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="title">Short Movie</p>
+                                <p>Short Movie adalah projek kelas untuk membuat film pendek sesuai tema yang ditentukan kelas</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+    
+                <div class="card">
+                    <input type="checkbox" id="card3" class="toggle-flip">
+                    <label for="card3" class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <p class="title">Kunjungan</p>
+                                <img src="img/Kunjungan.jpeg" alt="Kunjungan">
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="title">Kunjungan</p>
+                                <p>Kunjungan adalah projek berkelompok untuk mewawancarai tempat sesuai dengan bidang studi kelas</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+    
+                <!-- Card 4 -->
+                <div class="card">
+                    <input type="checkbox" id="card4" class="toggle-flip">
+                    <label for="card4" class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <p class="title">Kebudi luhuruan</p>
+                                <img src="img/Kebudiluhuran.jpeg" alt="Kebudiluhuran">
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="title">Kebudi luhuran</p>
+                                <p>Kebudiluhuran adalah projek berkelompok untuk berbuat baik kepada masyarakt lingkungan sekitar</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+    
+                <div class="card">
+                    <input type="checkbox" id="card5" class="toggle-flip">
+                    <label for="card5" class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <p class="title">Karya Ilmiah</p>
+                                <img src="img/Karya Ilmiah.jpeg" alt="Karya Ilmiah">
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="title">Karya ilmiah</p>
+                                <p>Karya Ilmiah adalah projek berkelompok membuat karya ilmiah sebagai syarat kelulusan</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </section>
+    
+    
+            <section id="project-event">
+                <h2>Projek Event</h2>
+                <div class="content-container">
+                    <input type="radio" name="content" id="content1" checked>
+                    <input type="radio" name="content" id="content2">                        
+                    <div class="button-container">
+                        <label for="content1" class="button">Sanlat 1</label>
+                        <label for="content2" class="button">Sanlat 2</label>
+                    </div>
+                    <div class="content content1">
+                        <div class="content-item">
+                            <img src="img/sanlat 1.jpeg" alt="Content 1 Image">
+                            <p>Sebuah event Pesantren Kilat di sekolah sebagai ketua acara saat kelas 10</p>
+                        </div>
+                    </div>
+                    <div class="content content2">
+                        <div class="content-item">
+                            <img src="img/sanlat 2.jpeg" alt="Content 2 Image">
+                            <p>Sebuah event Pesantren Kilat di sekolah sebagai devisi acara saat kelas 11</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-container-maulid">
+                    <input type="radio" name="content-maulid" id="content3" checked>
+                    <input type="radio" name="content-maulid" id="content4">                        
+                    <div class="button-container">
+                        <label for="content3" class="button">Maulid 1</label>
+                        <label for="content4" class="button">Maulid 2</label>
+                    </div>
+                    <div class="content-maulid 3 content3">
+                        <div class="content-item-maulid">
+                            <img src="img/maulid 1.jpeg" alt="Content 3 Image">
+                            <p>Sebuah event Maulid Nabi di sekolah sebagai sekretaris saat kelas 11</p>
+                        </div>
+                    </div>
+                    <div class="content-maulid content4">
+                        <div class="content-item-maulid">
+                            <img src="img/maulid 2.jpeg" alt="Content 4 Image">
+                            <p>Sebuah event Maulid Nabi di sekolah sebagai MC saat kelas 12</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-container">
+                    <div class="content-item">
+                        <img class="content-isra" src="img/isra miraj.jpeg">
+                        <p>Sebuah event Isra Miraj di sekolah sebagai divisi perlengkapan saat kelas 10</p>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="project-lomba">
+                <h2>Projek Lomba</h2>
+                <div>
+                    <h3>Lomba</h3>
+                    <p>Saya pernah mengikuti lomba seperti lomba ICT.</p>
+                </div>
+            </section>
+    
+            <section id="project-tugas">
+                <h2>Project Tugas</h2>
+                <div>
+                    <h3>Tugas</h3>
+                    <p>Ada beberapa karya hasil tugas saya yang dapat dimasukkan ke dalam portofolio, seperti tugas video editing dan ICT.</p>
+                </div>
+            </section>
+    
+            <section id="project-pribadi">
+                <h2>Project Pribadi</h2>
+                <div>
+                    <h3>Pribadi</h3>
+                    <p>Project pribadi yang saya buat adalah project Skynox dan Somalus.</p>
+                </div>
+            </section>
+    
+            <section id="project-lain">
+                <h2>Lain-lain</h2>
+            </section>
         </div>
-
-            <div>
-                <h3>Kelas 10</h3>
-                <p>Di kelas 10 kita mendapatkan project untuk membuat maket dan short film.</p>
-            </div>
-            <div>
-                <h3>Kelas 11</h3>
-                <p>Di kelas 11 kita membuat project kunjungan dan kebudiluhuran.</p>
-            </div>
-            <div>
-                <h3>Kelas 12</h3>
-                <p>Di kelas 12 kita membuat project karya tulis sebagai tanda kelulusan.</p>
-            </div>
-        </section>
-
-        <section id="project-event">
-            <h2>Projek Event</h2>
-            <div>
-                <h3>Event</h3>
-                <p>Saya telah mengikuti beberapa event sebagai panitia, seperti Maulid Nabi, Isra Miraj, dan Pesantren Kilat.</p>
-            </div>
-        </section>
-
-        <section id="project-lomba">
-            <h2>Projek Lomba</h2>
-            <div>
-                <h3>Lomba</h3>
-                <p>Saya pernah mengikuti lomba seperti lomba ICT.</p>
-            </div>
-        </section>
-
-        <section id="project-tugas">
-            <h2>Project Tugas</h2>
-            <div>
-                <h3>Tugas</h3>
-                <p>Ada beberapa karya hasil tugas saya yang dapat dimasukkan ke dalam portofolio, seperti tugas video editing dan ICT.</p>
-            </div>
-        </section>
-
-        <section id="project-pribadi">
-            <h2>Project Pribadi</h2>
-            <div>
-                <h3>Pribadi</h3>
-                <p>Project pribadi yang saya buat adalah project Skynox dan Somalus.</p>
-            </div>
-        </section>
-
-        <section id="project-lain">
-            <h2>Lain-lain</h2>
-        </section>
     </div>
 
 </body>
